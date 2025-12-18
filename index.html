@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ching Ling - Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Ícones Font Awesome (versão 6) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @font-face {
+      font-family: 'ChinaDoll';
+      src: url('fonts/ChinaDoll.woff2') format('woff2'),
+           url('fonts/ChinaDoll.woff') format('woff'),
+           url('fonts/ChinaDoll.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      /* fundo preto com imagem personalizada */
+      background-color: #000000;
+      background-image: url('fundo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffd700;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      padding: 24px 16px 40px;
+      text-align: center;
+      /* leve fundo escuro semi-transparente para destacar o conteúdo */
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #ffd700;
+      margin: 0 auto 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #111;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 6px;
+      font-family: 'ChinaDoll', Arial, Helvetica, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    p.subtitle {
+      font-size: 14px;
+      color: #f1c40f;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* BOTÕES 3D */
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 999px;
+      border: 2px solid #ffd700;
+      background: linear-gradient(#ffdd55, #d4a700);
+      color: #000000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 0 #8a6b00, 0 10px 15px rgba(0,0,0,0.6);
+      transition: all 0.15s ease;
+    }
+
+    .btn-link i {
+      font-size: 18px;
+    }
+
+    .btn-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #8a6b00, 0 14px 20px rgba(0,0,0,0.7);
+    }
+
+    .btn-link:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 #8a6b00, 0 4px 8px rgba(0,0,0,0.7);
+      background: linear-gradient(#d4a700, #ffdd55);
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #dddddd;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding-top: 40px;
+      }
+
+      .btn-link {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+
+      .btn-link i {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- logo.jpg que você vai enviar -->
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo Ching Ling">
+    </div>
+
+    <h1>Ching Ling</h1>
+    <p class="subtitle">De tudo um pouco</p>
+
+    <div class="links">
+      <!-- Instagram @xing_ling_guriri -->
+      <a class="btn-link" href="https://www.instagram.com/xing_ling_guriri" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+
+      <!-- TikTok @9salvation -->
+      <a class="btn-link" href="https://www.tiktok.com/@9salvation" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-tiktok"></i>
+        <span>TikTok</span>
+      </a>
+
+      <!-- WhatsApp: 27 99881-1104  -> wa.me/5527998811104 -->
+      <a class="btn-link" href="https://wa.me/5527998811104" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Facebook -->
+      <a class="btn-link" href="https://www.facebook.com/xinglingeletronicos" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+        <span>Facebook</span>
+      </a>
+
+      <!-- Localização Google Maps -->
+      <a
+        class="btn-link"
+        href="https://www.google.com/maps/search/?api=1&query=Av.+Esbertalina+Barbosa+Damiani%2C+1536+-+Guriri+Sul%2C+S%C3%A3o+Mateus+-+ES%2C+29944-230%2C+Brasil"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Ver localização da loja</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Ching Ling - Todos os direitos reservados
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
