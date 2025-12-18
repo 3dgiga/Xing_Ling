@@ -40,15 +40,14 @@
       background-position: center;
       background-repeat: no-repeat;
       color: #ffd700;
-      /* removido o alinhamento vertical central */
       display: block;
     }
 
     .container {
       width: 100%;
       max-width: 480px;
-      margin: 0 auto;          /* centraliza só na horizontal */
-      padding: 16px 16px 40px; /* topo menor para colar melhor */
+      margin: 0 auto;
+      padding: 16px 16px 40px;
       text-align: center;
       background: transparent;
       border-radius: 16px;
@@ -59,7 +58,7 @@
       height: 120px;
       border-radius: 50%;
       border: 3px solid #ffd700;
-      margin: 0 auto 16px;
+      margin: 16px auto 16px; /* pequeno espaço antes da logo */
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -134,7 +133,12 @@
       color: #dddddd;
     }
 
-    /* Ajustes para celular */
+    .datetime {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #cccccc;
+    }
+
     @media (max-width: 480px) {
       body {
         background-size: contain;
@@ -201,11 +205,38 @@
 
     <div class="footer">
       © <span id="year"></span> Ching Ling - Todos os direitos reservados
+      <div id="datetime" class="datetime"></div>
     </div>
   </div>
 
   <script>
+    // Ano do rodapé
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Relógio e data dinâmica: dd/mm/aaaa - diaSemana - hh.mm.ss
+    function updateDateTime() {
+      const now = new Date();
+
+      const dd   = String(now.getDate()).padStart(2, '0');
+      const mm   = String(now.getMonth() + 1).padStart(2, '0');
+      const yyyy = now.getFullYear();
+
+      const days = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado']; // [web:209][web:212]
+      const dayName = days[now.getDay()];
+
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mi = String(now.getMinutes()).padStart(2, '0');
+      const ss = String(now.getSeconds()).padStart(2, '0');
+
+      const dateStr = `${dd}/${mm}/${yyyy}`;
+      const timeStr = `${hh}.${mi}.${ss}`;
+
+      document.getElementById('datetime').textContent =
+        `"${dateStr}" "${dayName}" "${timeStr}"`;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // atualiza a cada segundo [web:199][web:202]
   </script>
 </body>
 </html>
