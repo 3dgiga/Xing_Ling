@@ -47,7 +47,8 @@
       max-width: 480px;
       padding: 24px 16px 40px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.7);
+      /* removido o fundo semitransparente */
+      background: transparent;
       border-radius: 16px;
     }
 
@@ -134,7 +135,7 @@
     /* Ajustes para celular */
     @media (max-width: 480px) {
       body {
-        background-size: contain;      /* mostra mais da imagem no mobile */
+        background-size: contain;
         background-position: top center;
         background-color: #000000;
       }
