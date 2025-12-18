@@ -29,25 +29,27 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       background-color: #000000;
       background-image: url('fundo.jpg');
-      background-size: cover;      /* desktop */
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: #ffd700;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      /* removido o alinhamento vertical central */
+      display: block;
     }
 
     .container {
       width: 100%;
       max-width: 480px;
-      padding: 24px 16px 40px;
+      margin: 0 auto;          /* centraliza só na horizontal */
+      padding: 16px 16px 40px; /* topo menor para colar melhor */
       text-align: center;
-      /* removido o fundo semitransparente */
       background: transparent;
       border-radius: 16px;
     }
@@ -141,7 +143,7 @@
       }
 
       .container {
-        padding-top: 40px;
+        padding: 12px 12px 32px;
       }
 
       .btn-link {
@@ -157,7 +159,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- logo.jpg que você vai enviar -->
+    <!-- logo.jpg -->
     <div class="logo">
       <img src="logo.jpg" alt="Logo Ching Ling">
     </div>
@@ -166,31 +168,26 @@
     <p class="subtitle">De tudo um pouco</p>
 
     <div class="links">
-      <!-- Instagram @xing_ling_guriri -->
       <a class="btn-link" href="https://www.instagram.com/xing_ling_guriri" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-instagram"></i>
         <span>Instagram</span>
       </a>
 
-      <!-- TikTok @9salvation -->
       <a class="btn-link" href="https://www.tiktok.com/@9salvation" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-tiktok"></i>
         <span>TikTok</span>
       </a>
 
-      <!-- WhatsApp: 27 99881-1104 -> wa.me/5527998811104 -->
       <a class="btn-link" href="https://wa.me/5527998811104" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span>WhatsApp</span>
       </a>
 
-      <!-- Facebook -->
       <a class="btn-link" href="https://www.facebook.com/xinglingeletronicos" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-facebook-f"></i>
         <span>Facebook</span>
       </a>
 
-      <!-- Localização Google Maps -->
       <a
         class="btn-link"
         href="https://www.google.com/maps/search/?api=1&query=Av.+Esbertalina+Barbosa+Damiani%2C+1536+-+Guriri+Sul%2C+S%C3%A3o+Mateus+-+ES%2C+29944-230%2C+Brasil"
