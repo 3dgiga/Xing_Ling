@@ -30,10 +30,9 @@
     }
 
     body {
-      /* fundo preto com imagem personalizada */
       background-color: #000000;
       background-image: url('fundo.jpg');
-      background-size: cover;
+      background-size: cover;      /* desktop */
       background-position: center;
       background-repeat: no-repeat;
       color: #ffd700;
@@ -48,7 +47,6 @@
       max-width: 480px;
       padding: 24px 16px 40px;
       text-align: center;
-      /* leve fundo escuro semi-transparente para destacar o conteúdo */
       background: rgba(0, 0, 0, 0.7);
       border-radius: 16px;
     }
@@ -133,7 +131,14 @@
       color: #dddddd;
     }
 
+    /* Ajustes para celular */
     @media (max-width: 480px) {
+      body {
+        background-size: contain;      /* mostra mais da imagem no mobile */
+        background-position: top center;
+        background-color: #000000;
+      }
+
       .container {
         padding-top: 40px;
       }
@@ -172,7 +177,7 @@
         <span>TikTok</span>
       </a>
 
-      <!-- WhatsApp: 27 99881-1104  -> wa.me/5527998811104 -->
+      <!-- WhatsApp: 27 99881-1104 -> wa.me/5527998811104 -->
       <a class="btn-link" href="https://wa.me/5527998811104" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span>WhatsApp</span>
